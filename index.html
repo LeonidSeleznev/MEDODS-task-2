@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <div class="game">
+          <div class="square" @click="clicked(1)" :class="{lit: isLit[1]}"></div>
+          <div class="square" @click="clicked(2)" :class="{lit: isLit[2]}"></div>
+          <div class="square" @click="clicked(3)" :class="{lit: isLit[3]}"></div>
+          <div class="square" @click="clicked(4)" :class="{lit: isLit[4]}"></div>
+        </div>
+      </div>
+      <div class="difficulty">
+        <button :class="{active: difficulty == 1500}" @click="changeDiff(1500)">Легкий</button>
+        <button :class="{active: difficulty == 1000}" @click="changeDiff(1000)">Средний</button>
+        <button :class="{active: difficulty == 400}" @click="changeDiff(400)">Сложный</button>
+      </div>
+      <div class="start">
+        <div class="start-btn" @click="startGame">
+          {{ centerButton }}
+          <span v-show="playing">{{ showScore }}</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</html>

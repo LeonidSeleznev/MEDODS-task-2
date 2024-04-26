@@ -1,0 +1,112 @@
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 1.4em;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #6c6c6c;
+  border-radius: 3%;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 250px;
+}
+.game .start {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 20px solid #737373;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  height: 100px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100px;
+}
+.game .start span {
+  font-size: 0.7em;
+}
+.game .square {
+  cursor: pointer;
+  height: 40%;
+  width: 40%;
+}
+.game .square:nth-of-type(1) {
+  background: #1b4f27;
+}
+.game .square:nth-of-type(1).lit {
+  background: #3bae56;
+}
+.game .square:nth-of-type(2) {
+  background: #5c0f0f;
+}
+.game .square:nth-of-type(2).lit {
+  background: #ca2121;
+}
+.game .square:nth-of-type(3) {
+  background: #929235;
+}
+.game .square:nth-of-type(3).lit {
+  background: #cece78;
+}
+.game .square:nth-of-type(4) {
+  background: #14146d;
+}
+.game .square:nth-of-type(4).lit {
+  background: #2929d8;
+}
+
+.start {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.start .start-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #423f3f;
+  color: #fff;
+  border: 2px solid #737373;
+  cursor: pointer;
+  min-height: 30px;
+  width: 150px;
+}
+.start .start-btn span {
+  font-size: 0.7em;
+}
+
+.difficulty {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
+}
+.difficulty > button {
+  border: 2px solid #b3b3b3;
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 0.7em;
+  height: 30px;
+  background: #423f3f;
+  cursor: pointer;
+}
+.difficulty > button.active {
+  background: #359b4d;
+}/*# sourceMappingURL=styles.css.map */

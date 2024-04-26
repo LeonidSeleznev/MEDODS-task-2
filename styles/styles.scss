@@ -1,0 +1,120 @@
+$background: #808080;
+$buttonBackground: #423f3f;
+$red: #5c0f0f;
+$white: #fff;
+$yellow: #929235;
+$green: #1b4f27;
+$blue: #14146d;
+
+@mixin center-align {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin space-around {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body {
+  @include center-align();
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 1.4em;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game {
+  @include space-around();
+  background: darken($background, 8%);
+  border-radius: 3%;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 250px;
+
+  .start {
+    @include center-align();
+    align-content: center;
+    flex-wrap: wrap;
+    background: $white;
+    border: 20px solid darken($background, 5%);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    height: 100px;
+    user-select: none;
+    width: 100px;
+    span {
+      font-size: 0.7em;
+    }
+  }
+  .square {
+    cursor: pointer;
+    height: 40%;
+    width: 40%;
+    &:nth-of-type(1) {
+      background: $green;
+      &.lit {
+        background: lighten($green, 25%);
+      }
+    }
+    &:nth-of-type(2) {
+      background: $red;
+      &.lit {
+        background: lighten($red, 25%);
+      }
+    }
+    &:nth-of-type(3) {
+      background: $yellow;
+      &.lit {
+        background: lighten($yellow, 25%);
+      }
+    }
+    &:nth-of-type(4) {
+      background: $blue;
+      &.lit {
+        background: lighten($blue, 25%);
+      }
+    }
+  }
+}
+.start {
+  @include center-align();
+
+  .start-btn {
+    @include center-align();
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: $buttonBackground;
+    color: $white;
+    border: 2px solid darken($background, 5%);
+    cursor: pointer;
+    min-height: 30px;
+    width: 150px;
+    span {
+      font-size: 0.7em;
+    }
+  }
+}
+
+.difficulty {
+  @include space-around();
+  margin: 10px 0;
+
+  & > button {
+    border: 2px solid lighten($background, 20%);
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 0.7em;
+    height: 30px;
+    background: $buttonBackground;
+    cursor: pointer;
+
+    &.active {
+      background: lighten($green, 20%);
+    }
+  }
+}
